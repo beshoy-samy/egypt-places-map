@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neighborhood Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="static/js/javascript.js"></script>
+    <script type='text/javascript' src='static/js/knockout.js'></script>
+    <script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+  </head>
+  <body>
+
+    <div class="col-md-3" id="search-area">
+      <h2 class="search-header">search for a place</h2>
+      <input class="search-box" data-bind="textInput: searchValue, valueUpdate: 'afterkeydown'" />
+      <ul class="list-group list" data-bind="foreach: searchResults" >
+      <li class="list-group-item" data-bind="text: name, click: onListItemClicked.bind($data, name)"></li>
+      </ul>
+    </div>
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBak1F54Bw35z5F_8HEbpcbYRft9JhkvZE&callback=initMap" async defer></script>
+
+  </body>
+</html>

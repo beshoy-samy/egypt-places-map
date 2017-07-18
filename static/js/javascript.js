@@ -164,8 +164,8 @@ function showPlaceInfoWindow(marker){
       var image =result.images[1].display_sizes[0].uri;
       // generating html
       htmlContentResult= '<div id="content">'+
-      '<h1 id="firstHeading" class="firstHea  ding">'+marker.title+'</h1>'+
-      '<div id="bodyContent">'+
+      '<h1>'+marker.title+'</h1>'+
+      '<div>'+
       '<p>'+placesMustBeVisitedInEgypt[marker.id].desc+'</p>'+
       '<img src='+image+" style = width:100%;>"+
       '</div>'+
@@ -195,14 +195,14 @@ function showPlaceInfoWindow(marker){
 
   },
   error: function(XMLHttpRequest, textStatus, errorThrown) {
-    errorHandling();
+    handleError();
   }
 });
 
 
 }
 
-function errorHandling() {
+function handleError() {
     alert("connection error");
 }
 

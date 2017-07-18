@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Neighborhood Map</title>
+    <title>Egypt Top 6 Places</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <script type="text/javascript" src="static/js/javascript.js"></script>
@@ -19,9 +19,10 @@
       <li class="list-group-item" data-bind="text: name, click: onListItemClicked.bind($data, name)"></li>
       </ul>
     </div>
-    <div id="map"></div>
+    <div class="col-md-9" id="map"></div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBak1F54Bw35z5F_8HEbpcbYRft9JhkvZE&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBak1F54Bw35z5F_8HEbpcbYRft9JhkvZE&callback=initMap" async defer
+    onerror="handleError()"></script>
 
   </body>
 </html>
